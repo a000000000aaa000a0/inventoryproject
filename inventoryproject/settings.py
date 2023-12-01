@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,3 +132,13 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+MESSAGE_TAGS = {constants.SUCCESS: 'alert alert-success',}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# EMAIL_HOST = 'smtp.live.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'ktq2390326@stu.o-hara.ac.jp'
+# EMAIL_HOST_PASSWORD = 'Tomonori0811'
+# EMAIL_USE_TLS = True

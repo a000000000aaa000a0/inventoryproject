@@ -20,4 +20,5 @@ urlpatterns = [
 
     path('inventory/<int:pk>/delete/', views.InventoryDeleteView.as_view(), name='inventory_delete'),
 
+    path('contact/', views.ContactView.as_view(), name = 'contact'),
 ]

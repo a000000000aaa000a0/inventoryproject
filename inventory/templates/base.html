@@ -162,11 +162,11 @@
             <li><a href="{% url 'inventory:mypage' %}" class="text-white">マイページ</a></li>
             <li><a href="{% url 'accounts:logout' %}" class="text-white">ログアウト</a></li>
            
-            <li><a href="mailto:admin@example.com" class="text-white">お問い合わせ</a></li>
+            <li><a href="{% url 'inventory:contact' %}" class="text-white">お問い合わせ</a></li>
             {% else %}
             <li><a href="{% url 'accounts:signup' %}" class="text-white">サインアップ</a></li>
             <li><a href="{% url 'accounts:logout' %}" class="text-white">ログイン</a></li>
-            <li><a href="mailto:admin@example.com" class="text-white">お問い合わせ</a></li>
+            <li><a href="{% url 'inventory:contact' %}" class="text-white">お問い合わせ</a></li>
             {% endif %}
           </ul>
         </div>
